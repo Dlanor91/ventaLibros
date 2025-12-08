@@ -27,7 +27,7 @@ public class VentaMLController {
     ResponseEntity<List<VentaML>> getAll() {
         List<VentaML> listar = ventaMLService.listar();
 
-        logger.info("Cantidad de listar: {}", listar.size());
+        logger.info("Cantidad de ventas: {}", listar.size());
         return ResponseEntity.ok(listar);
     }
 
@@ -55,5 +55,13 @@ public class VentaMLController {
 
         logger.info("Venta eliminada con id: {}", id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/sinProcesar")
+    ResponseEntity<List<VentaML>> listarSinProcesar() {
+        List<VentaML> listar = ventaMLService.buscarVentasSinProcesar();
+
+        logger.info("Cantidad de ventas sin procesar: {}", listar.size());
+        return ResponseEntity.ok(listar);
     }
 }

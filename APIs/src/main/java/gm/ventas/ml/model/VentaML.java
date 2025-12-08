@@ -54,6 +54,9 @@ public class VentaML extends BaseEntity {
     @Column(name = "fecha_venta", nullable = false)
     private LocalDateTime fechaVenta;
 
+    @Column(nullable = false)
+    private Boolean procesada = false;
+
     @PrePersist
     public void prePersist() {
         this.fechaVenta = LocalDateTime.now();

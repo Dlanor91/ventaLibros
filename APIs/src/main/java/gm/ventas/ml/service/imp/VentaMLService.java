@@ -58,4 +58,10 @@ public class VentaMLService implements IVentaMLService {
 
         ventaMLRepository.delete(venta);
     }
+
+    @Override
+    public List<VentaML> buscarVentasSinProcesar() {
+
+        return ventaMLRepository.findByProcesadaFalse();
+    }
 }

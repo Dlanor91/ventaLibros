@@ -12,4 +12,6 @@ public interface IVentaMLService {
     public VentaML insertar(VentaML ventaML);
 
     public void eliminar(Integer id);
+
+    public List<VentaML> buscarVentasSinProcesar();
 }
