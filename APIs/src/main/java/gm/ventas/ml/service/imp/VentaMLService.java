@@ -64,4 +64,13 @@ public class VentaMLService implements IVentaMLService {
 
         return ventaMLRepository.findByProcesadaFalse();
     }
+
+    @Override
+    public void procesarVenta(Integer id) {
+        VentaML buscarVenta = buscarPorId(id);
+
+        buscarVenta.setProcesada(true);
+
+        ventaMLRepository.save(buscarVenta);
+    }
 }

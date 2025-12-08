@@ -64,4 +64,9 @@ public class VentaMLController {
         logger.info("Cantidad de ventas sin procesar: {}", listar.size());
         return ResponseEntity.ok(listar);
     }
+
+    @PostMapping("/{id}/procesar")
+    public void procesarVenta(@PathVariable Integer id) {
+        ventaMLService.procesarVenta(id);
+    }
 }
