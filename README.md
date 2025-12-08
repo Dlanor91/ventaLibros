@@ -1,2 +1,3 @@
-# ventaLibrosMl
-Proyecto que permite gestionar el backend de la venta de libros por ML
+# Tienda de Libros Mercado Libre
+
+Sistema que permitira la venta de lirbos por mercado libre
