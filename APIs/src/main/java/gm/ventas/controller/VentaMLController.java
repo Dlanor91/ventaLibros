@@ -1,7 +1,7 @@
-package gm.ventas.ml.controller;
+package gm.ventas.controller;
 
-import gm.ventas.ml.model.VentaML;
-import gm.ventas.ml.service.imp.VentaMLService;
+import gm.ventas.model.VentaML;
+import gm.ventas.service.imp.VentaMLService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

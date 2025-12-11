@@ -1,4 +1,4 @@
-package gm.ventas.ml.model;
+package gm.ventas.model;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

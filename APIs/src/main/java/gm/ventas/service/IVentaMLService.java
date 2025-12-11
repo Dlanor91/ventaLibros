@@ -1,6 +1,6 @@
-package gm.ventas.ml.service;
+package gm.ventas.service;
 
-import gm.ventas.ml.model.VentaML;
+import gm.ventas.model.VentaML;
 
 import java.util.List;
 

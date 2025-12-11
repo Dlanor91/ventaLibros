@@ -1,6 +1,6 @@
-package gm.ventas.ml.repository;
+package gm.ventas.repository;
 
-import gm.ventas.ml.model.VentaML;
+import gm.ventas.model.VentaML;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

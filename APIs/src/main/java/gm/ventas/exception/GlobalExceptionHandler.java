@@ -1,4 +1,4 @@
-package gm.ventas.ml.exception;
+package gm.ventas.exception;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;

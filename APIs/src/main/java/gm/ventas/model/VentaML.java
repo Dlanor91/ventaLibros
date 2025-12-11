@@ -1,4 +1,4 @@
-package gm.ventas.ml.model;
+package gm.ventas.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 @Table(name = "ventas_ml")
-public class VentaML extends BaseEntity {
+public class VentaML extends gm.ventas.model.BaseEntity {
     @NotBlank
     @Column(name = "user_email", length = 50, nullable = false)
     private String userEmail;

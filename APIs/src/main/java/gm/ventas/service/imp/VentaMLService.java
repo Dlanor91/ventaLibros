@@ -1,8 +1,8 @@
-package gm.ventas.ml.service.imp;
+package gm.ventas.service.imp;
 
-import gm.ventas.ml.model.VentaML;
-import gm.ventas.ml.repository.VentaMLRepository;
-import gm.ventas.ml.service.IVentaMLService;
+import gm.ventas.model.VentaML;
+import gm.ventas.repository.VentaMLRepository;
+import gm.ventas.service.IVentaMLService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
