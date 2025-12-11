@@ -44,7 +44,7 @@ public class VentaMLController {
         VentaML venta = ventaMLService.insertar(ventaML);
 
         logger.info("Venta creada con id: {}", venta.getId());
-        URI location = URI.create("api/venta/" + venta.getId());
+        URI location = URI.create("api/ventas/" + venta.getId());
 
         return ResponseEntity.created(location).body(venta);
     }

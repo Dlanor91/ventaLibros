@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -22,15 +23,17 @@ import java.time.LocalDateTime;
 @ToString
 @Table(name = "ventas_ml")
 public class VentaML extends gm.ventas.model.BaseEntity {
-    @NotBlank
+    
+    @NotBlank(message = "El email del usuario no puede ser null")
     @Column(name = "user_email", length = 50, nullable = false)
     private String userEmail;
 
-    @NotBlank
+    @NotBlank(message = "El telefono del usuario no puede ser null")
     @Column(name = "user_phone", length = 20, nullable = false)
     private String userPhone;
 
-    @NotNull
+    @NotNull(message = "La cantidad no puede ser null")
+    @Min(value = 1, message = "La cantidad debe ser mayor que 0")
     @Column(name = "cantidad", nullable = false)
     private Integer cantidad;
 
@@ -39,15 +42,15 @@ public class VentaML extends gm.ventas.model.BaseEntity {
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precio;
 
-    @NotBlank
+    @NotBlank(message = "El codigo de la moneda no puede ser null")
     @Column(name = "cod_moneda", length = 3, nullable = false)
     private String codMoneda;
 
-    @NotBlank
+    @NotBlank(message = "El isbn del libro no puede ser null")
     @Column(name = "isbn_libro", length = 20, nullable = false)
     private String isbnLibro;
 
-    @NotBlank
+    @NotBlank(message = "El nombre del libro no puede ser null")
     @Column(name = "nombre_libro", length = 100, nullable = false)
     private String nombreLibro;
 

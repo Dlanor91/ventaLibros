@@ -5,15 +5,15 @@ import gm.ventas.model.VentaML;
 import java.util.List;
 
 public interface IVentaMLService {
-    public List<VentaML> listar();
+    List<VentaML> listar();
 
-    public VentaML buscarPorId(Integer id);
+    VentaML buscarPorId(Integer id);
 
-    public VentaML insertar(VentaML ventaML);
+    VentaML insertar(VentaML ventaML);
 
-    public void eliminar(Integer id);
+    void eliminar(Integer id);
 
-    public List<VentaML> buscarVentasSinProcesar();
+    List<VentaML> buscarVentasSinProcesar();
 
-    public void procesarVenta(Integer id);
+    void procesarVenta(Integer id);
 }
