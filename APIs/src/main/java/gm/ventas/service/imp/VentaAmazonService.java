@@ -1,6 +1,7 @@
 package gm.ventas.service.imp;
 
 import gm.ventas.model.VentaAmazon;
+import gm.ventas.model.enums.Estados;
 import gm.ventas.repository.VentaAmazonRepository;
 import gm.ventas.service.IVentaAmazonService;
 import org.springframework.data.domain.Sort;
@@ -33,5 +34,15 @@ public class VentaAmazonService implements IVentaAmazonService {
         venta.setCantidad(ventaAmazon.getCantidad());
 
         return ventaAmazonRepository.save(venta);
+    }
+
+    @Override
+    public List<VentaAmazon> buscarVentasSinProcesar() {
+        return ventaAmazonRepository.findByEstadoVenta(Estados.EN_PROCESO);
+    }
+
+    @Override
+    public void actualizarEstado(VentaAmazon venta) {
+        ventaAmazonRepository.save(venta);
     }
 }

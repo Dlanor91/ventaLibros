@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping("/api/ventasAmazon")
 public class VentaAmazonController {
 
-
     private static final Logger logger = LoggerFactory.getLogger(VentaAmazonController.class);
 
     private final VentaAmazonService ventaAmazonService;
@@ -41,5 +40,4 @@ public class VentaAmazonController {
 
         return ResponseEntity.created(location).body(venta);
     }
-
 }
