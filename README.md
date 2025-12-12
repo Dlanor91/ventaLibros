@@ -1,3 +1,3 @@
-# Tienda de Libros Mercado Libre
+# Tienda de Libros – Integración Mercado Libre & Amazon
 
-Sistema que permitira la venta de lirbos por mercado libre
+Sistema diseñado para gestionar y automatizar la venta de libros a través de Mercado Libre y Amazon, centralizando operaciones, stock, precios y publicaciones en una sola plataforma.
