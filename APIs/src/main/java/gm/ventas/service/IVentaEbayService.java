@@ -1,12 +1,17 @@
 package gm.ventas.service;
 
 import gm.ventas.model.VentaEbay;
+import gm.ventas.model.enums.Estados;
 
 import java.util.List;
 
 public interface IVentaEbayService {
 
+    List<VentaEbay> listarTodas();
+
+    VentaEbay buscarPorId(Integer id);
+
     VentaEbay guardar(VentaEbay venta);
 
-    List<VentaEbay> listarTodas();
+    VentaEbay actualizarEstadoVenta(Integer id, VentaEbay ventaEbay, Estados estado);
 }
