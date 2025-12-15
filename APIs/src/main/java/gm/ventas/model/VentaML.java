@@ -4,26 +4,24 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.validation.constraints.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
+@Getter
+@Setter
 @Table(name = "ventas_ml")
-public class VentaML extends gm.ventas.model.BaseEntity {
-    
+public class VentaML extends BaseEntity {
+
+    @Email
     @NotBlank(message = "El email del usuario no puede ser null")
     @Column(name = "user_email", length = 50, nullable = false)
     private String userEmail;
