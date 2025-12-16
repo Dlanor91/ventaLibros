@@ -54,7 +54,7 @@ public class VentaEbayService implements IVentaEbayService {
     }
 
     @Override
-    public VentaEbay actualizarEstadoVenta(Integer id, VentaEbay ventaEbay, Estados estado) {
+    public VentaEbay actualizarEstadoVenta(Integer id, Estados estado) {
 
         if (id == null) {
             throw new IllegalArgumentException("El id no puede ser null");

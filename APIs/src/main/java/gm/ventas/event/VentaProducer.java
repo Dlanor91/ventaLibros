@@ -1,7 +1,7 @@
 package gm.ventas.event;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import gm.events.common.EventEnvelope;
+import gm.ventas.event.enums.EventType;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class VentaProducer {
     public void enviarVentaCreada(VentaCreadaEvent venta) {
 
         EventEnvelope event = new EventEnvelope(
-                "VENTA_CREADA",
+                EventType.VENTA_CREADA,
                 objectMapper.valueToTree(venta)
         );
 

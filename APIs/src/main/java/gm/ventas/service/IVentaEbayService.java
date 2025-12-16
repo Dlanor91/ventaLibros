@@ -13,5 +13,5 @@ public interface IVentaEbayService {
 
     VentaEbay guardar(VentaEbay venta);
 
-    VentaEbay actualizarEstadoVenta(Integer id, VentaEbay ventaEbay, Estados estado);
+    VentaEbay actualizarEstadoVenta(Integer id, Estados estado);
 }

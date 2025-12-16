@@ -1,9 +1,10 @@
-package gm.events.common;
+package gm.ventas.event;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import gm.ventas.event.enums.EventType;
 
 public record EventEnvelope(
-        String eventType,
+        EventType eventType,
         JsonNode payload
 ) {
 }
